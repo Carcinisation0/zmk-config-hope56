@@ -34,7 +34,7 @@ keymap {
 &kp TAB     &kp W      &kp L         &kp Y         &kp P   &kp B               &kp Z      &kp F      &kp O      &kp U            &kp SEMI   &kp BSLH
 &kp LCTRL   &kp C      &kp R         &kp S         &kp T   &kp G               &kp M      &kp N      &kp E      &kp I            &kp A      &kp APOS
 &kp LSHFT   &kp Q      &kp J         &kp V         &kp D   &kp K               &kp X      &kp H      &kp COMMA  &kp DOT          &kp FSLH   &kp DOUBLE_QUOTES
-                       &kp LEFT_GUI  &mo nav       &kp SPACE   &mo numpad      &mt RSHFT SPACE  &kp RALT  &kp RCTRL      &kp RGUI
+                       &kp LEFT_GUI  &mo nav       &kp SPACE   &mo numpad      &kp RSHFT  &kp RALT  &kp RCTRL      &kp RGUI
             >;
 
             display-name = "LAYER0";
@@ -79,8 +79,8 @@ ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
         nav {
             bindings = <
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
-___  ___  &kp DEL  k&p UP  k&p BACKSPACE  ___    ___  ___  ___  ___  ___  ___
-___  ___  &kp RIGHT  &kp DOWN  &kp LEFT  ___    ___  ___  ___  ___  ___  ___
+___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
+___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
           ___  ___  ___  ___    ___  ___  ___  ___
             >;
