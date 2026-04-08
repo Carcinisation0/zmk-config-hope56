@@ -12,6 +12,8 @@
 #define gameplus 3
 #define nav 4
 
+#include "combos.dtsi"
+
 // hyper key
 #define HYP LS(LC(LA(LGUI)))
 #define MEH LS(LC(LALT))
