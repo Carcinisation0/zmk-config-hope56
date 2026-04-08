@@ -9,7 +9,7 @@
 #define numpad 1
 #define game 2
 #define gameplus 3
-#define nav 2
+#define nav 4
 
 // hyper key
 #define HYP LS(LC(LA(LGUI)))
