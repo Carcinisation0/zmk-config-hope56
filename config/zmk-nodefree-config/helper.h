@@ -3,6 +3,7 @@
  *
  * Convenience macros simplifying ZMK's keymap configuration.
  * See https://github.com/urob/zmk-nodefree-config for documentation.
+ 
  */
 
 #pragma once
