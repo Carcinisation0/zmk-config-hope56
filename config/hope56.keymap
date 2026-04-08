@@ -81,7 +81,7 @@ ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
 ___  ___  ___              ___               ___  ___    ___  ___  ___  ___  ___  ___
 ___  &kp HYP    &kp DEL          &kp UP            &kp BSPC  ___    ___  ___  ___  ___  ___  ___
 ___  &kp ENTER  &kp LEFT         &kp DN            &kp RIGHT  ___    ___  ___  ___  ___  ___  ___
-___  &kp LCTRL  &mt LALT LG(TAB) &kp C_PLAY_PAUSE  &kp TAB    ___    ___  ___  ___  ___  ___  ___
+___  &kp LCTRL  &kp LALT &kp C_PLAY_PAUSE  &kp TAB    ___    ___  ___  ___  ___  ___  ___
           ___  ___  ___  ___    ___  ___  ___  ___
             >;
 
