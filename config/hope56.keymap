@@ -1,8 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h
 
-#define ___ ___
+#define ___ &trans
 
 #define base 0
 #define numpad 1
@@ -33,7 +34,7 @@ keymap {
 &kp TAB     &kp W      &kp L         &kp Y         &kp P   &kp B               &kp Z      &kp F      &kp O      &kp U            &kp SEMI   &kp BSLH
 &kp LCTRL   &kp C      &kp R         &kp S         &kp T   &kp G               &kp M      &kp N      &kp E      &kp I            &kp A      &kp APOS
 &kp LSHFT   &kp Q      &kp J         &kp V         &kp D   &kp K               &kp X      &kp H      &kp COMMA  &kp DOT          &kp FSLH   &kp DOUBLE_QUOTES
-                       &kp LEFT_GUI  &mo nav       &kp SPACE   &mo numpad      &tm RSHFT SPACE  &kp RALT  &mo 2      &kp RCTRL
+                       &kp LEFT_GUI  &mo nav       &kp SPACE   &mo numpad      &mt RSHFT SPACE  &kp RALT  &kp RCTRL      &kp RGUI
             >;
 
             display-name = "LAYER0";
