@@ -53,7 +53,7 @@
 keymap {
         compatible = "zmk,keymap";
 
-        base {
+        BASE {
             bindings = <
 &kp ESC     &kp N1     &kp N2        &kp N3        &kp N4  &kp N5              &kp N6     &kp N7     &kp N8     &kp N9           &kp N0     &kp BACKSPACE
 &kp TAB     &kp W      &kp L         &kp Y         &kp P   &kp B               &kp Z      &kp F      &kp O      &kp U            &kp SEMI   &kp BSLH
@@ -65,7 +65,7 @@ keymap {
             display-name = "LAYER0";
         };
 
-        numpad {
+        NUM {
             bindings = <
 ___         &kp F1           &kp F2           &kp F3           &kp F4           &kp F5               &kp F6      &kp F7                &kp F8                 &kp F9         &kp F10         &kp F11
 ___         &kp N6           &kp N7           &kp N8           &kp N9           &kp N0               ___         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp PIPE        &kp F12
@@ -77,7 +77,7 @@ ___         &kp SLASH        &kp KP_MULTIPLY  &kp MINUS        &kp PLUS         
             display-name = "layer1";
         };
 
-        game {
+        GAME {
             bindings = <
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___ 
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
@@ -89,7 +89,7 @@ ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
             display-name = "layer2";
         };
 
-        gameplus {
+        GPLUS {
             bindings = <
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
 ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
@@ -101,7 +101,7 @@ ___  ___  ___  ___  ___  ___    ___  ___  ___  ___  ___  ___
             display-name = "layer3";
         };
 
-        nav {
+        NAV {
             bindings = <
 ___  ___  ___       ___       ___            ___    ___  ___  ___  ___  ___  ___
 ___  &kp ESC  &kp DEL   &kp UP    &kp BACKSPACE  &kp LC(BACKSPACE)    ___  ___  ___  ___  ___  ___
