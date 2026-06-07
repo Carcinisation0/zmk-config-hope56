@@ -5,8 +5,8 @@
     col-gpios
         = <&pro_micro 7 GPIO_ACTIVE_HIGH> // 011 left
         , <&pro_micro 6 GPIO_ACTIVE_HIGH> // 100
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // 022
         , <&pro_micro 5 GPIO_ACTIVE_HIGH> // 024
+        , <&pro_micro 4 GPIO_ACTIVE_HIGH> // 022
         , <&pro_micro 3 GPIO_ACTIVE_HIGH> // 020
         , <&pro_micro 2 GPIO_ACTIVE_HIGH> // 017 right
         ;
