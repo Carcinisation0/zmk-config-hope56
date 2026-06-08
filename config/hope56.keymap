@@ -81,7 +81,7 @@ MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
 &kp ESCAPE    &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     &kp BACKSPACE
 &kp ENTER     &hml LGUI C   &hml LALT R   &hml LSHFT S   &hml LCTRL T   &kp G              &kp M            &hmr RCTRL N     &hmr RSHFT E     &hmr LALT I   &hmr RGUI A  &kp ENTER
 &kp LEFT_GUI  &kp K         &kp J         &hml MEH V     &kp D          &kp Q              &kp X            &kp H            &hmr MEH COMMA   &kp PERIOD    &kp SLASH    &kp LEFT_GUI
-                            &kp LEFT_GUI  &mo NAV       &lt NUM SPACE   &mo NUM            &mo NUM          &lt RSHFT SPACE  &kp RALT         &mo FUN          &kp RGUI
+                            &kp LEFT_GUI  &kp LSHFT      &lt NUM SPACE  &mo NAV            &kp RALT         &mt RSHFT SPACE  &mo NUM          &mo FUN
             >;
         };
  
