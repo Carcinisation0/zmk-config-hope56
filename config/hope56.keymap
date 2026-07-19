@@ -16,11 +16,11 @@
 #define NAV   4
 #define FUN   5
  
-#define KEYS_L LN0 LN1 LN2 LN3 LN4 LN5   LT0 LT1 LT2 LT3 LT4 LT5   LM0 LM1 LM2 LM3 LM4 LM5   LB0 LB1 LB2 LB3 LB4 LB5  // left hand
-#define KEYS_R RN0 RN1 RN2 RN3 RN4 RN5   RT0 RT1 RT2 RT3 RT4 RT5   RM0 RM1 RM2 RM3 RM4 RM5   RB0 RB1 RB2 RB3 RB4 RB5  // right hand
+#define KEYS_L LN0 LN1 LN2 LN3 LN4   LT0 LT1 LT2 LT3 LT4 LT5   LM0 LM1 LM2 LM3 LM4 LM5   LB0 LB1 LB2 LB3 LB4  // left hand
+#define KEYS_R RN0 RN1 RN2 RN3 RN4   RT0 RT1 RT2 RT3 RT4 RT5   RM0 RM1 RM2 RM3 RM4 RM5   RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH3 LH2 LH1 LH0   RH0 RH1 RH2 RH3                                                                      // thumbs
  
-#include "combos.dtsi"
+// #include "combos.dtsi"
  
 // hyper key
 #define HYP LS(LC(LA(LGUI)))
@@ -77,10 +77,10 @@ MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
         BASE {
             display-name = "base";
             bindings = <
-&kp ESC       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp N6           &kp N7           &kp N8           &kp N9        &kp N0       &kp DEL
+       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp N6           &kp N7           &kp N8           &kp N9        &kp N0       
 &kp ESCAPE    &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     &kp BACKSPACE
 &kp ENTER     &hml LGUI C   &hml LALT R   &hml LSHFT S   &hml LCTRL T   &kp G              &kp M            &hmr RCTRL N     &hmr RSHFT E     &hmr LALT I   &hmr RGUI A  &kp ENTER
-&kp LEFT_GUI  &kp K         &kp J         &hml MEH V     &kp D          &kp Q              &kp X            &kp H            &hmr MEH COMMA   &kp PERIOD    &kp SLASH    &kp LEFT_GUI
+  &kp K         &kp J         &hml MEH V     &kp D          &kp Q              &kp X            &kp H            &hmr MEH COMMA   &kp PERIOD    &kp SLASH    
                             &mo FUN       &mo NAV        &lt NUM SPACE  &kp LSHFT          &kp RALT         &mt RSHFT SPACE  &kp RALT         &mo FUN    
             >;
         };
@@ -88,10 +88,10 @@ MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
         NUM {
             display-name = "num";
             bindings = <
-___           &kp F1        &kp F2           &kp F3     &kp F4    &kp F5       &kp F6                &kp F7                &kp F8                 &kp F9         &kp F10    &kp F11
+           &kp F1        &kp F2           &kp F3     &kp F4    &kp F5       &kp F6                &kp F7                &kp F8                 &kp F9         &kp F10    
 &kp BACKSPACE &kp N6        &kp N7           &kp N8     &kp N9    &kp N0       &kp SEMI              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp PIPE   &none
 &kp ENTER     &kp N1        &kp N2           &kp N3     &kp N4    &kp N5       &kp COLON             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER      &kp EQUAL  &kp ENTER
-&kp EQUAL     &kp SLASH     &kp KP_MULTIPLY  &kp MINUS  &kp PLUS  &none        &none                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE      &kp TILDE  &none
+     &kp SLASH     &kp KP_MULTIPLY  &kp MINUS  &kp PLUS  &none        &none                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE      &kp TILDE  
                             ___              ___        ___       ___          ___                   ___                   ___                    ___
             >;
         };
@@ -99,10 +99,10 @@ ___           &kp F1        &kp F2           &kp F3     &kp F4    &kp F5       &
         GAME {
             display-name = "game";
             bindings = <
-&kp ESC &kp N1            &kp N2 &kp N3    &kp N4      &kp N5       ___        ___          ___       ___            ___        ___
+ &kp N1            &kp N2 &kp N3    &kp N4      &kp N5       ___        ___          ___       ___            ___
 &kp N1  &kp TAB           &kp Q  &kp W     &kp E       &kp R        &kp TILDE  &none        &kp UP    &none          &none      &to 0
 &kp N2  &kp LSHIFT        &kp A  &kp S     &kp D       &sl 3        &kp LG(G)  &kp LEFT     &kp DOWN  &kp RIGHT      &kp ENTER  &to 0
-&kp N3  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C       &kp F        &none      &kp PAGE_UP  &none     &kp PAGE_DOWN  &none      &to 0
+  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C       &kp F        &none      &kp PAGE_UP  &none     &kp PAGE_DOWN  &none      
                           &kp LALT &mo NAV &kp SPACE   &kp P        &none        &none     &none     &none
             >;
         };
@@ -110,10 +110,10 @@ ___           &kp F1        &kp F2           &kp F3     &kp F4    &kp F5       &
         GPLUS {
             display-name = "gplus";
             bindings = <
-___        ___           ___        ___     ___     ___       ___        ___    ___    ___    ___    ___
+        ___           ___        ___     ___     ___       ___        ___    ___    ___    ___    
 &kp TILDE  &kp F5        &kp N1     &kp N2  &kp N3  &kp N4    &none      &none  &none  &none  &none  &none
 &none      &kp LEFT_ALT  &kp SLASH  &kp K   &kp Y   &kp V     &kp LG(G)  &none  &none  &none  &none  &none
-&none      &kp L         &kp I      &kp T   &kp N5  &kp N6    &none      &none  &none  &none  &none  &none
+&      &kp L         &kp I      &kp T   &kp N5  &kp N6    &none      &none  &none  &none  &none  
                                     &none   &kp J   &kp G     &kp M      &none  &none  &none
             >;
         };
@@ -121,10 +121,10 @@ ___        ___           ___        ___     ___     ___       ___        ___    
         NAV {
             display-name = "nav";
             bindings = <
-&kp U         &kp LS(L)         &kp H                 &kp A             &kp E          &kp I                ___            ___           ___           ___    ___    ___
+         &kp LS(L)         &kp H                 &kp A             &kp E          &kp I                ___            ___           ___           ___    ___    
 &kp C_VOL_UP  &kp ESC           &kp DEL               &kp UP            &kp BACKSPACE  &kp LC(BACKSPACE)    &none          &kp LG(L)     &none         &none  &none  &to GAME
 &kp C_VOL_DN  &kp ENTER         &kp LEFT              &kp DOWN          &kp RIGHT      &kp PG_UP            &kp LS(ENTER)  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none  &to GAME
-&kp LEFT_GUI  &kp LEFT_CONTROL  &mt LEFT_ALT LG(TAB)  &kp C_PLAY_PAUSE  &kp TAB        &kp PAGE_DOWN        &none          &none         &none         &none  &none  &to GAME
+  &kp LEFT_CONTROL  &mt LEFT_ALT LG(TAB)  &kp C_PLAY_PAUSE  &kp TAB        &kp PAGE_DOWN        &none          &none         &none         &none  &none  
                                                       ___               ___            ___                  ___            ___           ___           ___
             >;
         };
@@ -132,10 +132,10 @@ ___        ___           ___        ___     ___     ___       ___        ___    
         FUN {
             display-name = "fun";
             bindings = <
-___           ___              ___                                 ___              ___              ___                ___    ___     ___     ___     ___      ___
+          ___              ___                                 ___              ___              ___                ___    ___     ___     ___     ___      
 &out OUT_USB  &none            &rgb_ug RGB_COLOR_HSB(131,80,159)   &none            &none            &rgb_ug RGB_ON     &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
 &none         &none            &rgb_ug RGB_COLOR_HSB(255,230,199)  &none            &none            &rgb_ug RGB_OFF    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
-&none         &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(128,100,10)   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF    &none  &kp F1  &kp F2  &kp F3  &kp F12  &none
+         &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(128,100,10)   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF    &none  &kp F1  &kp F2  &kp F3  &kp F12  
                                                                    &none            &none            &none              &none  &none   &none   &none
             >;
         };
