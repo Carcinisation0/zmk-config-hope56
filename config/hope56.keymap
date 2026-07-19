@@ -18,13 +18,13 @@
  
 #define KEYS_L LN0 LN1 LN2 LN3 LN4   LT0 LT1 LT2 LT3 LT4 LT5   LM0 LM1 LM2 LM3 LM4 LM5   LB0 LB1 LB2 LB3 LB4  // left hand
 #define KEYS_R RN0 RN1 RN2 RN3 RN4   RT0 RT1 RT2 RT3 RT4 RT5   RM0 RM1 RM2 RM3 RM4 RM5   RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH3 LH2 LH1 LH0   RH0 RH1 RH2 RH3                                                                      // thumbs
+#define THUMBS LH3 LH2 LH1 LH0   RH0 RH1 RH2 RH3                                                              // thumbs
  
 // #include "combos.dtsi"
  
-// hyper key
-#define HYP LS(LC(LA(LGUI)))
-#define MEH LS(LC(LALT))
+// hyper key / meh z mapy totem
+#define HYP F18
+#define MEH F19
  
 #define QUICK_TAP_MS 175
  
@@ -55,21 +55,6 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // lewostronne HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // prawostronne HRMs
  
-// Makro dla Timeless Layer-Tap (zdefiniowane, ale jak w oryginale nieużywane)
-#define MAKE_LTL(NAME, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
-        flavor = "balanced"; \
-        tapping-term-ms = <280>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
-        bindings = <&mo>, <&kp>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
- 
-MAKE_LTL(ltl, KEYS_R THUMBS)  // warstwa na lewej ręce, triggery na prawej
-MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
- 
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -78,65 +63,65 @@ MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
             display-name = "base";
             bindings = <
        &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp N6           &kp N7           &kp N8           &kp N9        &kp N0       
-&kp ESCAPE    &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     &kp BACKSPACE
+___           &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     ___
 &kp ENTER     &hml LGUI C   &hml LALT R   &hml LSHFT S   &hml LCTRL T   &kp G              &kp M            &hmr RCTRL N     &hmr RSHFT E     &hmr LALT I   &hmr RGUI A  &kp ENTER
-  &kp K         &kp J         &hml MEH V     &kp D          &kp Q              &kp X            &kp H            &hmr MEH COMMA   &kp PERIOD    &kp SLASH    
-                            &mo FUN       &mo NAV        &lt NUM SPACE  &kp LSHFT          &kp RALT         &mt RSHFT SPACE  &kp RALT         &mo FUN    
+              &kp K         &kp J         &hml MEH V     &hml HYP D     &kp Q              &kp X            &hmr HYP H       &hmr MEH COMMA   &kp PERIOD    &kp SLASH    
+                                          &mo FUN        &mo NAV        ___                ___              &lt NUM SPACE    &mt RSHFT SPACE  &kp RALT      &mo FUN    
             >;
         };
  
         NUM {
             display-name = "num";
             bindings = <
-           &kp F1        &kp F2           &kp F3     &kp F4    &kp F5       &kp F6                &kp F7                &kp F8                 &kp F9         &kp F10    
-&kp BACKSPACE &kp N6        &kp N7           &kp N8     &kp N9    &kp N0       &kp SEMI              &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &kp PIPE   &none
-&kp ENTER     &kp N1        &kp N2           &kp N3     &kp N4    &kp N5       &kp COLON             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER      &kp EQUAL  &kp ENTER
-     &kp SLASH     &kp KP_MULTIPLY  &kp MINUS  &kp PLUS  &none        &none                 &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp GRAVE      &kp TILDE  
-                            ___              ___        ___       ___          ___                   ___                   ___                    ___
+       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+___           &kp N6        &kp N7        &kp N8         &kp N9         &kp N0             &kp LG(MINUS)    &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp PIPE     ___
+&kp EQUAL     &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp LG(LS(MINUS)) &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp UNDER &kp EQUAL &kp ENTER
+              &kp SLASH     &kp KP_MULTIPLY &kp MINUS    &kp PLUS       &none              &none            &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp GRAVE     &kp TILDE    
+                                          ___            ___            ___                ___              ___              ___              ___           ___       
             >;
         };
  
         GAME {
             display-name = "game";
             bindings = <
- &kp N1            &kp N2 &kp N3    &kp N4      &kp N5       ___        ___          ___       ___            ___
-&kp N1  &kp TAB           &kp Q  &kp W     &kp E       &kp R        &kp TILDE  &none        &kp UP    &none          &none      &to 0
-&kp N2  &kp LSHIFT        &kp A  &kp S     &kp D       &sl 3        &kp LG(G)  &kp LEFT     &kp DOWN  &kp RIGHT      &kp ENTER  &to 0
-  &kp LEFT_CONTROL  &kp Z  &kp X     &kp C       &kp F        &none      &kp PAGE_UP  &none     &kp PAGE_DOWN  &none      
-                          &kp LALT &mo NAV &kp SPACE   &kp P        &none        &none     &none     &none
+       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+___           &kp TAB       &kp Q         &kp W          &kp E          &kp R              &kp TILDE        &none            &kp UP           &none         &none        ___
+&kp N2        &kp LSHIFT    &kp A         &kp S          &kp D          &sl GPLUS          &kp LG(G)        &kp LEFT         &kp DOWN         &kp RIGHT     &kp ENTER    &to BASE
+              &kp LCTRL     &kp Z         &kp X          &kp C          &kp F              &none            &kp PAGE_UP      &none            &kp PAGE_DOWN &none        
+                                          &kp LALT       &mo NAV        ___                ___              &kp SPACE        ___              ___           &to BASE    
             >;
         };
  
         GPLUS {
             display-name = "gplus";
             bindings = <
-        ___           ___        ___     ___     ___       ___        ___    ___    ___    ___    
-&kp TILDE  &kp F5        &kp N1     &kp N2  &kp N3  &kp N4    &none      &none  &none  &none  &none  &none
-&none      &kp LEFT_ALT  &kp SLASH  &kp K   &kp Y   &kp V     &kp LG(G)  &none  &none  &none  &none  &none
-      &kp L         &kp I      &kp T   &kp N5  &kp N6    &none      &none  &none  &none  &none  
-                                    &none   &kp J   &kp G     &kp M      &none  &none  &none
+       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+___           &kp F5        &kp N1        &kp N2         &kp N3         &kp N4             &none            &none            &none            &none         &none        ___
+&none         &kp LEFT_ALT  &kp SLASH     &kp K          &kp Y          &kp V              &kp LG(G)        &none            &none            &none         &none        &none
+              &none         &kp L         &kp I          &kp T          &kp N5             &kp N6           &none            &none            &none         &none        
+                                          &kp J          &mo GAME       ___                ___              &kp M            &kp M            &none         &none    
             >;
         };
  
         NAV {
             display-name = "nav";
             bindings = <
-         &kp LS(L)         &kp H                 &kp A             &kp E          &kp I                ___            ___           ___           ___    ___    
-&kp C_VOL_UP  &kp ESC           &kp DEL               &kp UP            &kp BACKSPACE  &kp LC(BACKSPACE)    &none          &kp LG(L)     &none         &none  &none  &to GAME
-&kp C_VOL_DN  &kp ENTER         &kp LEFT              &kp DOWN          &kp RIGHT      &kp PG_UP            &kp LS(ENTER)  &kp C_VOL_DN  &kp C_VOL_UP  &none  &none  &to GAME
-  &kp LEFT_CONTROL  &mt LEFT_ALT LG(TAB)  &kp C_PLAY_PAUSE  &kp TAB        &kp PAGE_DOWN        &none          &none         &none         &none  &none  
-                                                      ___               ___            ___                  ___            ___           ___           ___
+       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+___           &kp ESC       &kp DEL       &kp UP         &kp BACKSPACE  &kp LC(BACKSPACE)  &kp LS(N6)       &kp LS(N7)       &kp LS(N8)       &kp LS(N9)    &kp LS(N0)   ___
+&kp LEFT_GUI  &kp LEFT_CONTROL &mt LEFT_ALT LG(TAB) &kp C_PLAY_PAUSE &kp TAB &kp PAGE_DOWN &kp LS(N1)      &kp LS(N2)       &kp LS(N3)       &kp LS(N4)    &kp LS(N5)   &to GAME
+              &none         &none         &none          &none          &none              &none            &none            &none            &none         &none        
+                                          ___            ___            ___                ___              ___              &kp SPACE        ___           ___       
             >;
         };
  
         FUN {
             display-name = "fun";
             bindings = <
-          ___              ___                                 ___              ___              ___                ___    ___     ___     ___     ___      
-&out OUT_USB  &none            &rgb_ug RGB_COLOR_HSB(131,80,159)   &none            &none            &rgb_ug RGB_ON     &none  &kp F7  &kp F8  &kp F9  &kp F10  &none
-&none         &none            &rgb_ug RGB_COLOR_HSB(255,230,199)  &none            &none            &rgb_ug RGB_OFF    &none  &kp F4  &kp F5  &kp F6  &kp F11  &none
-         &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(128,100,10)   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF    &none  &kp F1  &kp F2  &kp F3  &kp F12  
-                                                                   &none            &none            &none              &none  &none   &none   &none
+       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+___           &kp LS(L)     &kp H         &kp A          &kp I          &kp E              &none            &kp F7           &kp F8           &kp F9        &kp F10      ___
+&kp LG(LS(S)) &kp LC(Z)     &kp LC(A)     &kp C_VOL_DN   &kp C_VOL_UP   &kp M              &none            &kp F4           &kp F5           &kp F6        &kp F11      &none
+              &kp LC(Y)     &kp LC(X)     &kp LC(C)      &kp LC(V)      &kp LS(F3)         &none            &kp F1           &kp F2           &kp F3        &kp F12      
+                                          ___            ___            ___                ___              ___              ___              ___           ___       
             >;
         };
     };
