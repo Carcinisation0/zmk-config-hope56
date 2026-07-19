@@ -113,7 +113,7 @@ MAKE_LTL(ltr, KEYS_L THUMBS)  // warstwa na prawej ręce, triggery na lewej
         ___           ___        ___     ___     ___       ___        ___    ___    ___    ___    
 &kp TILDE  &kp F5        &kp N1     &kp N2  &kp N3  &kp N4    &none      &none  &none  &none  &none  &none
 &none      &kp LEFT_ALT  &kp SLASH  &kp K   &kp Y   &kp V     &kp LG(G)  &none  &none  &none  &none  &none
-&      &kp L         &kp I      &kp T   &kp N5  &kp N6    &none      &none  &none  &none  &none  
+      &kp L         &kp I      &kp T   &kp N5  &kp N6    &none      &none  &none  &none  &none  
                                     &none   &kp J   &kp G     &kp M      &none  &none  &none
             >;
         };
