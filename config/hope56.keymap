@@ -62,11 +62,11 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // prawostronne HRMs
         BASE {
             display-name = "base";
             bindings = <
-       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp N6           &kp N7           &kp N8           &kp N9        &kp N0       
+              &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             &kp N6           &kp N7           &kp N8           &kp N9        &kp N0       
 ___           &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     ___
 &kp ENTER     &hml LGUI C   &hml LALT R   &hml LSHFT S   &hml LCTRL T   &kp G              &kp M            &hmr RCTRL N     &hmr RSHFT E     &hmr LALT I   &hmr RGUI A  &kp ENTER
               &kp K         &kp J         &hml MEH V     &hml HYP D     &kp Q              &kp X            &hmr HYP H       &hmr MEH COMMA   &kp PERIOD    &kp SLASH    
-                                          &mo FUN        &mo NAV        ___                ___              &lt NUM SPACE    &mt RSHFT SPACE  &kp RALT      &mo FUN    
+                            &mo FUN       &mo NAV        &lt NUM SPACE  ___                ___              &mt RSHFT SPACE  &kp RALT         &mo FUN    
             >;
         };
  
