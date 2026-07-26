@@ -84,7 +84,7 @@ ___           &kp W         &kp L         &kp Y          &kp P          &kp B   
         GAME {
             display-name = "game";
             bindings = <
-              ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
+              &kp N1        &kp N2        &kp N3         &kp N4         &kp N5             ___              ___              ___              ___           ___       
 ___           &kp TAB       &kp Q         &kp W          &kp E          &kp R              &kp TILDE        &none            &kp UP           &none         &none        &to BASE
 &kp N2        &kp LSHIFT    &kp A         &kp S          &kp D          &sl GPLUS          &kp LG(G)        &kp LEFT         &kp DOWN         &kp RIGHT     &kp ENTER    &to BASE
               &kp LCTRL     &kp Z         &kp X          &kp C          &kp F              &none            &kp PAGE_UP      &none            &kp PAGE_DOWN &none        
@@ -95,11 +95,11 @@ ___           &kp TAB       &kp Q         &kp W          &kp E          &kp R   
         GPLUS {
             display-name = "gplus";
             bindings = <
-       ___           ___           ___            ___            ___                ___              ___              ___              ___           ___       
-___           &kp F5        &kp N1        &kp N2         &kp N3         &kp N4             &none            &none            &none            &none         &none        ___
-&none         &kp LEFT_ALT  &kp SLASH     &kp K          &kp Y          &kp V              &kp LG(G)        &none            &none            &none         &none        &none
-              &none         &kp L         &kp I          &kp T          &kp N5             &kp N6           &none            &none            &none         &none        
-                                          &kp J          &mo GAME       ___                ___              &kp M            &kp M            &none         &none    
+              &kp F1        &kp F2        &kp F3         &kp F4         &kp F5             ___              ___              ___              ___           ___       
+___           &kp F5        &kp N1        &kp N2         &kp N3         &kp F9             &none            &none            &none            &none         &none        ___
+&none         &kp LALT      &kp SLASH     &kp K          &kp Y          &kp V              &kp LG(G)        &none            &none            &none         &none        &none
+              &none         &kp L         &kp I          &kp T          &kp F8             &kp N6           &none            &none            &none         &none        
+                            &kp J         &kp G          &kp M          &kp LALT           &none            &none            &none            &none    
             >;
         };
  
