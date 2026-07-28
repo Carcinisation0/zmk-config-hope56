@@ -88,7 +88,7 @@ ___           &kp W         &kp L         &kp Y          &kp P          &kp B   
 ___           &kp TAB       &kp Q         &kp W          &kp E          &kp R              &kp TILDE        &none            &kp UP           &none         &none        &to BASE
 &kp N2        &kp LSHIFT    &kp A         &kp S          &kp D          &sl GPLUS          &kp LG(G)        &kp LEFT         &kp DOWN         &kp RIGHT     &kp ENTER    &to BASE
               &kp LCTRL     &kp Z         &kp X          &kp C          &kp F              &none            &kp PAGE_UP      &none            &kp PAGE_DOWN &none        
-                                          &kp LALT       &mo NAV        ___                ___              &kp SPACE        ___              ___           &to BASE    
+                                          &kp LALT       &mo NAV        &kp SPACE          &kp LALT         ___              ___              ___           ___    
             >;
         };
  
