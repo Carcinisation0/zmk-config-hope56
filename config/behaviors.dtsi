@@ -1,0 +1,32 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    macros {
+        del_word: del_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LCTRL &kp LSHFT>
+                , <&macro_tap     &kp LEFT>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&macro_tap     &kp BSPC>
+                ;
+        };
+
+        del_word_f: del_word_f {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press   &kp LCTRL &kp LSHFT>
+                , <&macro_tap     &kp RIGHT>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&macro_tap     &kp DEL>
+                ;
+        };
+    };
+};
