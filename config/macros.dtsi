@@ -9,8 +9,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             label = "DEL_WORD";
-            wait-ms = <20>;
-            tap-ms = <20>;
+            wait-ms = <5>;
+            tap-ms = <5>;
             bindings
                 = <&kp LS(LC(LEFT))>
                 , <&kp BSPC>
