@@ -16,5 +16,17 @@
                 , <&kp BSPC>
                 ;
         };
+
+wrap_paren: wrap_paren {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    wait-ms = <40>;
+    tap-ms = <20>;
+    bindings =
+        <&kp LC(X)>,
+        <&kp LPAR>, <&kp RPAR>, <&kp LEFT>,
+        <&kp LC(V)>;
+};
+
     };
 };
