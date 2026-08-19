@@ -1,0 +1,20 @@
+#pragma once
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    macros {
+        del_word: del_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "DEL_WORD";
+            wait-ms = <20>;
+            tap-ms = <20>;
+            bindings
+                = <&kp LS(LC(LEFT))>
+                , <&kp BSPC>
+                ;
+        };
+    };
+};
