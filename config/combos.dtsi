@@ -5,8 +5,6 @@
    37 38 39 40 41     42 43 44 45 46                 LB4 LB3 LB2 LB1 LB0     RB0 RB1 RB2 RB3 RB4       bottom row
       48 49 50 51     52 53 54 55                        LH3 LH2 LH1 LH0     RH0 RH1 RH2 RH3           thumb cluster
 */
- 
-// use require-prior-idle-ms for combos
 
 #include "macros.dtsi"
 
@@ -14,33 +12,30 @@
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
- 
-// Make sure that home row combos are tap only so that you can chord HRMs
-// #define HRC_LPAR   &hmr_lpar RS(RGUI) 0
-// #define HRC_RPAR   &hmr_rpar LA(RGUI) 0
- 
-//              Nazwa    Wynik                     Klawisze         Warstwy    Term
- 
+
+//           Nazwa              Wynik               Klawisze        Warstwy   Term
+
 // ——— NAV ———
-ZMK_COMBO(copy,  &kp LC(C),     LB3 LB2,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(paste, &kp LC(V),     LB2 LB1,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(find,  &kp LC(F),     LT3 LT2,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(undo,  &kp LC(Z),     LM1 LM0,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(redo,  &kp LC(Y),     LT1 LT0,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(cut,   &kp LC(X),     LM4 LM3,        NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(all,   &kp LC(A),     LM3 LM2 LM1,    NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(snip,  &kp LG(LS(S)), LB3 LB2 LB1,    NAV, COMBO_TERM_SLOW)
-ZMK_COMBO(delword,   &del_word, LT1 LT0         NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(copy,         &kp LC(C),          LB3 LB2,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(paste,        &kp LC(V),          LB2 LB1,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(find,         &kp LC(F),          LT3 LT2,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(undo,         &kp LC(Z),          LM1 LM0,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(redo,         &kp LC(Y),          LM2 LM1,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(cut,          &kp LC(X),          LM4 LM3,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(select_all,   &kp LC(A),          LM3 LM2 LM1,    NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(snip,         &kp LG(LS(S)),      LB3 LB2 LB1,    NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(delword,      &del_word,          LT1 LT0,        NAV, COMBO_TERM_SLOW)
+ZMK_COMBO(wrap_p,       &wrap_paren,        LB1 LB0,        NAV, COMBO_TERM_SLOW)
 
 // ——— NUM ——— 
-ZMK_COMBO(dot,   &kp DOT,       LT2 LT1,        NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(comma, &kp COMMA,     LT3 LT2,        NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(equal, &kp EQUAL,     LM3 LM2 LM1,    NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(dot,          &kp DOT,            LT2 LT1,        NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(comma,        &kp COMMA,          LT3 LT2,        NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(equal,        &kp EQUAL,          LM3 LM2 LM1,    NUM, COMBO_TERM_SLOW)
 
 // ——— BASE ———
-ZMK_COMBO(sqt,   &kp SQT,       RT1 RT2,        BASE, COMBO_TERM_FAST)
-ZMK_COMBO(dqt,   &kp DQT,       RT2 RT3,        BASE, COMBO_TERM_FAST)
+ZMK_COMBO(sqt,          &kp SQT,            RT1 RT2,        BASE, COMBO_TERM_FAST)
+ZMK_COMBO(dqt,          &kp DQT,            RT2 RT3,        BASE, COMBO_TERM_FAST)
 
 // ——— FUN ———
-ZMK_COMBO(all,   &kp LC(LS(LEFT)),  LT3 LT2,    FUN, COMBO_TERM_SLOW)
-ZMK_COMBO(all,   &kp LC(LS(RIGHT)), LT2 LT1,    FUN, COMBO_TERM_SLOW)
+ZMK_COMBO(select_w_left,  &kp LC(LS(LEFT)),  LT3 LT2,        FUN, COMBO_TERM_SLOW)
+ZMK_COMBO(select_w_right, &kp LC(LS(RIGHT)), LT2 LT1,        FUN, COMBO_TERM_SLOW)
