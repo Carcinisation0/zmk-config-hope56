@@ -7,12 +7,13 @@
 */
  
 // use require-prior-idle-ms for combos
+
+#include "macros.dtsi"
+
 #undef COMBO_HOOK
 #define COMBO_HOOK require-prior-idle-ms = <150>;
 #define COMBO_TERM_FAST 18
 #define COMBO_TERM_SLOW 30
-
-#include "macros.dtsi"
  
 // Make sure that home row combos are tap only so that you can chord HRMs
 // #define HRC_LPAR   &hmr_lpar RS(RGUI) 0
