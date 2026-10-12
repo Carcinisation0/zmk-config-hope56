@@ -15,6 +15,7 @@
 #define GPLUS 3
 #define NAV   4
 #define FUN   5
+#define MOUSE 6
  
 #define KEYS_L LN0 LN1 LN2 LN3 LN4   LT0 LT1 LT2 LT3 LT4 LT5   LM0 LM1 LM2 LM3 LM4 LM5   LB0 LB1 LB2 LB3 LB4  // left hand
 #define KEYS_R RN0 RN1 RN2 RN3 RN4   RT0 RT1 RT2 RT3 RT4 RT5   RM0 RM1 RM2 RM3 RM4 RM5   RB0 RB1 RB2 RB3 RB4  // right hand
@@ -69,7 +70,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // prawostronne HRMs
 &kp ENTER     &kp W         &kp L         &kp Y          &kp P          &kp B              &kp Z            &kp F            &kp O            &kp U         &kp SEMI     &kp ENTER
 &kp LG(D)     &hml LGUI C   &hml LALT R   &hml LSHFT S   &hml LCTRL T   &kp G              &kp M            &hmr RCTRL N     &hmr RSHFT E     &hmr LALT I   &hmr RGUI A  &kp LG(D)
               &kp K         &kp J         &hml MEH V     &hml HYP D     &kp Q              &kp X            &hmr HYP H       &hmr MEH COMMA   &kp PERIOD    &kp SLASH    
-                            &mo FUN       &mo NAV        &lt NUM SPACE  &mo FUN            &kp F11          &mt RSHFT SPACE  &kp RALT         &mo FUN    
+                            &mo FUN       &mo NAV        &lt NUM SPACE  &mo MOUSE          &mo MOUSE        &mt RSHFT SPACE  &kp RALT         &mo FUN    
             >;
         };
  
@@ -126,6 +127,17 @@ ___           &kp F5        &kp N1        &kp N2         &kp N3         &kp F9  
               &kp LC(Y)     &kp LC(X)     &kp LC(C)      &kp LC(V)      &kp LS(F3)         &none            &kp F1           &kp F2           &kp F3        &kp F12      
                                           ___            ___            ___                ___              ___              ___              ___           ___       
             >;
+        };
+
+        MOUSE {
+            display-name = "fun";
+            bindings = <
+    ___ ___ ___ ___ ___     ___ ___ ___ ___ ___
+___ ___ ___ ___ ___ ___     ___ ___ ___ ___ ___ ___
+___ ___ ___ ___ ___ ___     ___ ___ ___ ___ ___ ___
+    ___ ___ ___ ___ ___     ___ ___ ___ ___ ___
+        ___ ___ ___ ___     ___ ___ ___ ___
+         >;
         };
     };
 };
